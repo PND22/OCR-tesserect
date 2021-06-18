@@ -1,0 +1,6 @@
+# test_tesseract.py
+from PIL import Image
+import pytesseract
+
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe' # ระบุ path ที่ run tesseract
+print(pytesseract.image_to_string(Image.open('book.jpg'),lang='tha'))
